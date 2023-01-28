@@ -1,0 +1,63 @@
+  
+    <odoo>
+  <data>
+
+                <!-- Course Form-->
+
+  <record model="ir.ui.view" id="open_academy_formm">
+      <field name="name">open.academy.formm</field>
+      <field name="model">open.academyy</field>
+      <field name="arch" type="xml">
+
+        <form>
+        
+            <field name="name"/>
+            <field name="Description"/>
+        </form>
+      </field>
+    </record>
+
+
+  <!-- Course tree-->
+
+  <record model="ir.ui.view" id="open_academy_treee">
+      <field name="name">open.academy.treee</field>
+      <field name="model">open.academyy</field>
+      <field name="arch" type="xml">
+
+        <tree >
+            <field name="name"/>
+            <field name="Description"/>
+          
+        </tree>
+
+      </field>
+    </record>
+
+
+
+    <!-- Course Action-->
+
+ <!-- actions for menue or button to go  muste be befor menue declare  opening views on models -->
+
+     <record model="ir.actions.act_window" id="open_academy_actionn">
+      <field name="name"> Test</field>
+      <field name="res_model">open.academyy</field>
+      <field name="view_mode">search,tree,form</field>
+      <field name ="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        Create Test</p>
+    </field>
+    </record>
+
+     <!-- Course Menue-->
+
+   <!-- menu categories from model   tag for declare in ir.ui.menu to connect action tautomatoc for menue or button -->
+<!--   for list module -->
+   <menuitem id="openacademy_main_menuee" name= "Test"/> 
+   <menuitem id="openacademy_menuee" name= "Test" parent="openacademy_main_menuee"/>
+    <menuitem id="openacademy_test" name= "Test" parent="openacademy_menuee" action="open_academy_actionn"/>
+
+
+  </data>
+</odoo>
