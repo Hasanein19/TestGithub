@@ -5,14 +5,12 @@
      <record model="ir.ui.view" id="res_groups_formm">
                <field name="name">res.groups.formm</field>
                 <field name="model">res.groups</field>
-                <field name="priority">8</field>
-                
-                 <field name="inherit_id" ref="base.view_groups_form"/>
-                <field name="mode">primary</field> 
+                <!-- <field name="mode">primary</field>  -->
+                <field name="inherit_id" ref="base.view_groups_form"/>
                <!--  <field name="priority" eval="20"/>  -->
-                <!--  <field name="priority">1</field> -->
+                 <field name="priority">1</field>
             
-                   <field name="arch" type="xml"> 
+                <field name="arch" type="xml"> 
 
                   <page name="views" position="attributes"> 
                   <attribute name='invisible'>1</attribute>
@@ -32,26 +30,9 @@
                  
             
               </field>
-     </record> 
+      </record> 
 
-       <menuitem id="lock_date_userss" name="Lock Date Users" parent="account.menu_finance_entries"  action="base.action_res_groups"  groups="group_lockdate_users"/>
+    <menuitem id="lock_date_userss" name="Lock Date Users" parent="account.menu_finance_entries"  action="base.action_res_groups"  groups="group_lockdate_users"/>
 
   </data>
 </odoo>
-                <!--  <page string="Inherited" name="inherit_groups">
-                  <page string="Inherited" position="attributes">
-                <attribute name='invisible'>1</attribute> 
-                 </page> -->
-               
-         <!-- 
-        <record model="ir.actions.act_window" id="base.action_res_groups">
-           <field name="name"> Lock Date Users</field>
-          <field name="res_model">res.groups</field>
-           <field name="view_mode">form</field> 
-           <field name ="help" type="html">
-             
-           </field>
-           
-         </record> -->
-
- 
