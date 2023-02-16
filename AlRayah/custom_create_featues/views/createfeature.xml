@@ -1,0 +1,51 @@
+<odoo>
+       <data> 
+
+             <!-- sale order  Many2one  no craetion feature for specific group -->
+
+            <record model="ir.ui.view" id="sale_order_formm">
+                 <field name="name">sale.order.formm</field>
+                 <field name="model">sale.order</field>
+                 <field name="groups_id" eval="[(4,ref('group_creation_feature'))]"/>
+                 <field name="inherit_id" ref="sale.view_order_form"/>
+                 <field name="arch" type="xml">
+
+                    <xpath expr="//field[@name='order_line']//tree/field[@name='product_id']" position="attributes">
+                         <attribute name="options"> {'no_create': True}</attribute>
+                    </xpath>
+
+                     <xpath expr="//field[@name='partner_id']" position="attributes">
+                             <attribute name="options"> {'no_create': True}</attribute>
+                      </xpath>   
+
+                 </field> 
+            </record>
+
+             
+             <!-- purchase order  Many2one  no craetion feature for specific group -->
+
+             <record model="ir.ui.view" id="purchase_order_formm">
+                 <field name="name">purchase.order.formm</field>
+                 <field name="model">purchase.order</field>
+                 <field name="groups_id" eval="[(4,ref('group_creation_feature'))]"/>
+                 <field name="inherit_id" ref="purchase.purchase_order_form"/>
+                 <field name="arch" type="xml">
+
+                    <xpath expr="//field[@name='order_line']//tree/field[@name='product_id']" position="attributes">
+                         <attribute name="options"> {'no_create': True}</attribute>
+                    </xpath> 
+
+                    <xpath expr="//field[@name='partner_id']" position="attributes">
+                         <attribute name="options"> {'no_create': True}</attribute>
+                    </xpath>
+
+                 </field> 
+            </record>
+
+
+
+
+       </data>
+</odoo>
+
+                               

@@ -1,0 +1,39 @@
+<odoo>
+          
+          <!-- Action  for Purchssed Products -->
+
+  <report id ="report_ppurchase_xlx" 
+         model="account.move"
+         string="Recived and Billed  Report"
+         report_type="xlsx"
+         name="spreport.report_ppurchase_xls"
+         file="account.move"
+        
+                             /> 
+
+
+
+
+      <!-- Action for Salled Products -->
+
+    <report id ="report_ssale_xlx" 
+        model="account.move"
+        string="Delivered and Invoiced Report" 
+        report_type="xlsx"
+        name="spreport.report_ssale_xls"
+        file="account.move"
+                               /> 
+ 
+
+</odoo>
+<!-- 
+   <record model="ir.actions.report" id="report_purchase_xlx">
+           <field name="name">Recived and Billed  Report</field>
+           <field name="model">ppurchase.report.wizard</field>
+           <field name="report_type">xlsx</field> 
+           <field name="report_name">openacademy.report_purchase_xls</field>
+           <field name ="report_file">openacademy.report_purchase_xls</field>
+           <field name ="binding_type">report</field>
+     
+    </record>
+ -->

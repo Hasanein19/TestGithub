@@ -1,0 +1,23 @@
+<odoo>
+   
+   <!-- Inherit Inoice and bill form to insert Po/SO -->
+
+     <record model="ir.ui.view" id="account_move_formmm">
+               <field name="name">account.move.formmm</field>
+                <field name="model">account.move</field>
+                <field name="inherit_id" ref="account.view_move_form"/>
+                <field name="type">form</field>
+                <field name="arch" type="xml"> 
+                    <field name="payment_reference" position="before">
+                        <field name="p_order"/>
+                    </field>
+                    <field name="p_order" position="after">
+                        <field name="s_order"/>
+                    </field>
+                 
+            
+              </field>
+      </record> 
+
+ 
+</odoo>

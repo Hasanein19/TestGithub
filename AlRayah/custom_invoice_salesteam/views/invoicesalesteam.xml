@@ -1,0 +1,41 @@
+<odoo>
+       <data> 
+                
+               <!-- Adding slae team and person to sale invoice form-->
+             
+      
+
+            <record model="ir.ui.view" id="account_move_f">
+                <field name="name">account.move.f</field>
+                <field name="model">account.move</field>
+                <field name="inherit_id" ref="account.view_move_form"/>
+                    <field name="arch" type="xml"> 
+                      <group>
+
+                          <group>
+                                  <field name="s_person" position="before">
+                                  <field name="team_id"/>
+                                  </field>
+
+                         </group>
+
+                          <group>
+                                  <field name="team_id" position="after">
+                                  <field name="s_person"/>
+                                 </field>
+
+                          </group>     
+
+                     </group>
+                                  
+                  </field> 
+            </record> 
+
+
+
+
+
+       </data>
+</odoo>
+
+                               
