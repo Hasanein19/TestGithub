@@ -1,0 +1,28 @@
+<odoo>
+
+
+<!-- Group Category --> 
+<record model="ir.module.category" id="module_category_lockdate_users">
+<field name="name">LockDate Users</field>
+<field name="description">LockDate Users</field>
+<field name="sequence">45</field>
+</record>
+
+<!-- Group lock user-->
+
+<record id="group_lockdate_users" model="res.groups">
+<field name="name">Lock Date Users</field>
+<field name="category_id" ref="module_category_lockdate_users"/>
+</record> 
+
+
+<!-- Record  Rules -->
+<record  model="ir.rule" id="own_groupppp">
+<field name="name"> lock Date User </field>
+<field name="model_id" ref="model_res_groups"/>
+ <field name="domain_force">[('name','=', "Advisor")]</field> 
+<field name="groups" eval="[(4,ref('group_lockdate_users'))]"/>
+</record> 
+
+
+</odoo>
